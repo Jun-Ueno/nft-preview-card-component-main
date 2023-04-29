@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: .3s ease;
+    }
+    body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      font-size: 18px;
+      font-family: 'Outfit', sans-serif;
+      color: hsl(0, 0%, 100%);
+      background-color: hsl(217, 54%, 11%);
+    }
+    main {
+      padding: 1.5rem;
+    }
+    h1 {
+      font-size: 1.375rem;
+      color: hsl(0, 0%, 100%);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    h1:hover {
+      color: hsl(178, 100%, 50%);
+    }
+    p {
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+    .container {
+      background-color: hsl(216, 50%, 16%);
+      width: 350px;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px hsla(0, 0%, 0%, 20%);
+    }
+    .image-container {
+      position: relative;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: .5rem;
+    }
+    .image-container .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 5px;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      border-radius: .5rem;
+    }
+    .image-container .overlay img {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+    }
+    .image-container .overlay:hover {
+      opacity: 1;
+      background-color: hsla(178, 100%, 50%, 50%);
+    }
+    .text-container {
+      padding: 1rem 0 .5rem;
+    }
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid hsl(215, 32%, 27%);
+    }
+    .status-bar .value {
+      color: hsl(178, 100%, 50%);
+      font-weight: 600;
+    }
+    .status-bar p, .created-by {
+      font-size: 1rem;
+    }
+    .status-bar img {
+      vertical-align: -2px;
+      margin-right: 8px;
+    }
+    .created-by {
+      margin-top: 1rem;
+    }
+    .created-by img {
+      width: 34px;
+      height: 34px;
+      vertical-align: -11px;;
+      margin-right: 16px;
+      border-radius: 50%;
+      border: 1px solid hsl(0, 0%, 100%);
+      display: inline-block;
+    }
+    .created-by span {
+      color: hsl(0, 0%, 100%);
+    }
+    .created-by span:hover {
+      color: hsl(178, 100%, 50%);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media screen and (max-width:375px) {
+      p {
+        font-size: .9875rem;
+      }
+      .container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="container">
+      <figure class="image-container">
+        <img src="./images/image-equilibrium.jpg" alt="">
+        <div class="overlay"><img src="./images/icon-view.svg" alt=""></div>
+      </figure>
+      <section class="text-container">
+        <h1>Equilibrium #3429</h1>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+        <div class="status-bar">
+          <p class="value"><img src="./images/icon-ethereum.svg" alt="">0.041 ETH</p>
+          <p class="days"><img src="./images/icon-clock.svg" alt="">3 days left</p>
+        </div>
+        <p class="created-by"><img src="./images/image-avatar.png" alt="">Creation of <span class="name">Jules Wyvern</span></p>
+      </section>
+    </article>
+  </main>
+<!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+-->
+</body>
+</html>
